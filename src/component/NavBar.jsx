@@ -97,7 +97,7 @@ const NavBar = () => {
                         className="inline-flex items-center"
                       >                     
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Quizz Taster
+                          Quizz Tester
                         </span>
                       </NavLink>
                     </div>
