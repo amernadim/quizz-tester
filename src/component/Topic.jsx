@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Topic = ({ topic }) => {
-  // console.log(topic);
   const { id, name, logo, total } = topic;
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/home/${id}`)
+  }
   return (
     <div className="max-w-xs rounded-md shadow-md ">
       <img
@@ -19,7 +24,8 @@ const Topic = ({ topic }) => {
            Quizs : {total}
           </p>
         </div>
-        <button
+        <button 
+          onClick={handleNavigate}
           type="button"
           className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-blue-400 text-gray-900"
         >

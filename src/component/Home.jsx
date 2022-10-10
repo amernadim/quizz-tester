@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Lottie from "lottie-react";
 import animation from "../assets/animation.json";
 import { useLoaderData } from "react-router-dom";
 import Topic from "./Topic";
+import { DataContext } from "./Root";
 
 const Home = () => {
-  const datas = useLoaderData([]);
+  const datas = useContext(DataContext)
   const data = datas.data
   // console.log(data);
   return (
@@ -15,7 +16,7 @@ const Home = () => {
           <div className="mb-12 lg:max-w-lg lg:pr-5 lg:mb-0">
             <div className="max-w-xl mb-6">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                As Much As the Quiz Will Solve
+                As Much As the Quiz Will Solve,
                 <br className="hidden md:block" />
                 The Knowledge{" "}
                 <span className="inline-block text-blue-600">
