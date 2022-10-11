@@ -2,13 +2,9 @@ import React from "react";
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
-  ResponsiveContainer,
 } from "recharts";
 
 const Statistics = () => {
@@ -39,13 +35,13 @@ const Statistics = () => {
     },
   ];
   return (
-    <div  className="mt-[80px] mx-auto">
+    <div  className="mt-[80px] mx-auto w-10/12">
       <div>
         <h1 className="text-2xl font-bold text-center">Quiz Rechart</h1>
       </div>
       <BarChart
-        width={500}
-        height={500}
+        width={400}
+        height={400}
         data={data}
        className="mx-auto"
       >

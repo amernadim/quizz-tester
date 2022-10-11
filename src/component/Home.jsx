@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Lottie from "lottie-react";
 import animation from "../assets/animation.json";
-import { useLoaderData } from "react-router-dom";
 import Topic from "./Topic";
 import { DataContext } from "./Root";
 

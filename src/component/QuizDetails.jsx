@@ -3,7 +3,7 @@ import { EyeIcon } from "@heroicons/react/24/solid";
 
 const QuizDetails = ({ ques }) => {
 
-  const { correctAnswer, id, options, question } = ques;
+  const { correctAnswer, options, question } = ques;
   const [optionOne, optionTwo, optionThree, optionFour] = options;
 
   // console.log(correctAnswer);

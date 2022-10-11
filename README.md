@@ -1,7 +1,7 @@
 # Quiz Tester
 
 - ## Live Link
-Hosted in Netlify -> [Quiz Tester](/)
+Hosted in Netlify -> [Quiz Tester](https://quizz-tester.netlify.app/)
 
 - ## Context API
 
