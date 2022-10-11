@@ -17,9 +17,9 @@ const Quiz = () => {
       </h1>
 
       <div>
-        {questions.map((ques,idx) => (
+        {questions.map((ques) => (
           <QuizDetails 
-          key={idx}
+          key={ques.id}
           ques={ques}
           ></QuizDetails>
         ))}
