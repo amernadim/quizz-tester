@@ -13,7 +13,7 @@ const Topic = ({ topic }) => {
       <img
         src={logo}
         alt=""
-        className="object-cover object-center w-full rounded-t-md h-72 "
+        className="object-cover object-center w-full rounded-t-md h-72 bg-gray-600"
       />
       <div className="flex flex-col justify-between p-6 space-y-8">
         <div className="space-y-2">

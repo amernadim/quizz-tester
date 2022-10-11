@@ -1,18 +1,29 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import QuizDetails from "./QuizDetails";
 
 const Quiz = () => {
-  const quizs = useLoaderData([])
-  const quiz = quizs.data
-  console.log(quiz);
-  return (
-    <div className='mt-[80px]'>
-      <h1 className='text-center text-2xl font-bold'>Quiz Of {quiz.name}</h1>
-      {/* <div>
-        {
+  const data = useLoaderData([]);
+  const quizData = data.data;
+  const questions = quizData.questions;
 
-        }
-      </div> */}
+  // const ddd = questions.map(dd => dd.options)
+  // console.log(ddd);
+
+  return (
+    <div className="mt-[90px]">
+      <h1 className="text-center text-4xl font-bold">
+        Quiz Of {quizData.name}
+      </h1>
+
+      <div>
+        {questions.map((ques,idx) => (
+          <QuizDetails 
+          key={idx}
+          ques={ques}
+          ></QuizDetails>
+        ))}
+      </div>
     </div>
   );
 };
