@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 
 const QuizDetails = ({ques}) => {
   const {correctAnswer,id,options,question} = ques; 
@@ -10,9 +11,9 @@ const QuizDetails = ({ques}) => {
 
   const handleAnswer = (option) => {
     if(option === correctAnswer){
-      alert('yes')
-    }else {
-      alert('No')
+      Swal.fire("Good job!", "Your Answer Is Correct!", "success");
+    }else { 
+      Swal.fire("Oops...", "Your Answer Is Wrong!", "error");   
     }
   }
 
