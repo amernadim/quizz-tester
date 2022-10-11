@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+
 
 const Blog = () => {
+  
   return (
-    <div className='mt-[80px]'>
-      <h1>Blog</h1>
+    <div>
+      <h1>blog</h1>
     </div>
   );
 };

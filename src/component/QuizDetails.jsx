@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { EyeIcon } from "@heroicons/react/24/solid";
 
 const QuizDetails = ({ ques }) => {
+  const [count, setCount] = useState(0);
+
   const { correctAnswer, id, options, question } = ques;
   const [optionOne, optionTwo, optionThree, optionFour] = options;
 
@@ -22,6 +24,7 @@ const QuizDetails = ({ ques }) => {
     Swal.fire(`Answers: 
     ${correctAnswer}`)
   }
+   
 
   // console.log(optionOne);
   return (
@@ -33,7 +36,10 @@ const QuizDetails = ({ ques }) => {
         </p>
       </div>
 
-      <h2 className="text-center text-xl text-white mt-2">{orginalQuestion}</h2>
+      <h2 className="text-center text-xl text-white mt-2">
+        <span>Quiz {count+1} :</span>
+        <span> {orginalQuestion}</span>
+        </h2>
       <div className="grid md:grid-cols-2 gap-4 mt-3">
         <div className="flex bg-white p-2 rounded items-center ">
           <input
