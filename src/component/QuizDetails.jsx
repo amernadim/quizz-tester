@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { EyeIcon } from "@heroicons/react/24/solid";
 
 const QuizDetails = ({ ques }) => {
-  const [count, setCount] = useState(0);
 
   const { correctAnswer, id, options, question } = ques;
   const [optionOne, optionTwo, optionThree, optionFour] = options;
@@ -37,7 +35,7 @@ const QuizDetails = ({ ques }) => {
       </div>
 
       <h2 className="text-center text-xl text-white mt-2">
-        <span>Quiz {count+1} :</span>
+        <span>Quiz  :</span>
         <span> {orginalQuestion}</span>
         </h2>
       <div className="grid md:grid-cols-2 gap-4 mt-3">
