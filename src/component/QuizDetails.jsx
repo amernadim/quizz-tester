@@ -1,20 +1,25 @@
 import Swal from "sweetalert2";
 import { EyeIcon } from "@heroicons/react/24/solid";
+import { useContext } from "react";
+import { RightContext, WrongContext } from "./Root";
 
 const QuizDetails = ({ ques }) => {
+  const [right , setRight ] = useContext(RightContext);
+  const [wrong , setWrong] = useContext(WrongContext)
 
   const { correctAnswer, options, question } = ques;
   const [optionOne, optionTwo, optionThree, optionFour] = options;
 
-  // console.log(correctAnswer);
 
   let orginalQuestion = question.slice(3, -4);
 
   const handleAnswer = (option) => {
     if (option === correctAnswer) {
       Swal.fire("Good job!", "Your Answer Is Correct!", "success");
+      setRight(right + 1)
     } else {
       Swal.fire("Oops...", "Your Answer Is Wrong!", "error");
+      setWrong(wrong + 1)
     }
   };
 
@@ -23,6 +28,7 @@ const QuizDetails = ({ ques }) => {
     ${correctAnswer}`)
   }
    
+
 
   // console.log(optionOne);
   return (
